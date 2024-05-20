@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --White: rgba(255, 255, 255, 1);
+  --Green: rgba(40, 154, 21, 1);
+  --Black: rgba(0, 0, 0, 1);
+  --Grey: rgba(45, 42, 36, 1);
+  --Dark-Grey: rgba(45, 42, 36, 1);
+}
+.App {
+  font-family: "Poppins", sans-serif;
+  padding: 1em 2em;
+}
+img {
+  max-width: 100%;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 35%;
+}
+.cart {
+  display: flex;
+  /* align-items: center; */
+}
