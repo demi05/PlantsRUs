@@ -11,7 +11,7 @@ const Categories = () => {
     <div>
       <div className="categories-header">
         <h2>
-          <span>Our</span> Categories
+          Our <span>Categories</span>
         </h2>
       </div>
       <p>Explore More</p>

@@ -11,7 +11,7 @@ const Arrivals = () => {
     <div>
       <div className="arrivals-header">
         <h2>
-          <span>New</span> Arrivals
+          New <span>Arrivals</span>
         </h2>
       </div>
       <p>Explore More</p>

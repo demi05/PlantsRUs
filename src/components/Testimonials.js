@@ -4,7 +4,7 @@ const Testimonials = () => {
     <div>
       <div className="testimonials-header">
         <h2>
-          <span>Our</span> Testimonials
+          Our <span>Testimonials</span>
         </h2>
         <p>Explore More</p>
       </div>

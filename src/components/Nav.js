@@ -4,7 +4,7 @@ const Nav = () => {
     <div className="nav">
       <h2>Plants R Us</h2>
       <ul className="nav-elements">
-        <li>Home</li>
+        <li className="active">Home</li>
         <li>About</li>
         <li>Products</li>
         <li>Catalogue</li>

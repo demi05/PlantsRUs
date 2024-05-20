@@ -2,9 +2,11 @@ import playIcon from "../assets/images/play-icon.svg";
 import heroImg from "../assets/images/PngItem_127225 1.svg";
 const Hero = () => {
   return (
-    <div>
+    <div className="hero">
       <div className="hero-text">
-        <h1>Plant Your Happiness. Grow a Greener World!</h1>
+        <h1>
+          Plant Your Happiness. Grow a <span>Greener </span>World!
+        </h1>
         <p>
           Discover a New Level of Joy and Tranquility Through Indoor and Outdoor
           Gardening. Plant, Grow, and Thrive Together!
