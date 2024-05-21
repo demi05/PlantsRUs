@@ -450,6 +450,12 @@ nav .nav-icon {
     display: flex;
     flex-direction: column;
   }
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  .hero-text p {
+    font-size: 1.3rem;
+  }
   .hero-buttons {
     margin-bottom: 2em;
   }
@@ -468,6 +474,12 @@ nav .nav-icon {
     display: flex;
     flex-direction: column;
     min-height: 30vh;
+  }
+  .categories-header h2,
+  .arrivals-header h2,
+  .resources-header h2,
+  .testimonials-header h2 {
+    font-size: 1.75rem;
   }
   /* grow  */
   .grow-div {
@@ -490,11 +502,7 @@ nav .nav-icon {
   .testimonials-div {
     padding: 5em 3em;
   }
-  .testimonials-header h2 {
-    font-size: 1.5rem;
-  }
   .testimonials-img img {
-    /* border: 1px solid red; */
     padding: 0;
     width: 80%;
     margin: 0 auto;
