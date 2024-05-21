@@ -58,6 +58,9 @@ span {
 .nav ul .active {
   color: var(--Green);
 }
+.nav ul li:hover {
+  color: var(--Green);
+}
 .cart {
   display: flex;
   margin-left: auto;
@@ -173,13 +176,12 @@ nav .nav-icon {
 .categories-main,
 .arrivals-main {
   display: grid;
-  grid-template-columns: repeat(3, 3fr);
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
   gap: 1.5em;
   margin-bottom: 1.5em;
   cursor: pointer;
-  /* max-width: 450px; */
 }
 .categories-main-div,
 .arrivals-main-div {
@@ -191,13 +193,14 @@ nav .nav-icon {
 }
 .categories-main-div {
   position: relative;
-  height: 150px;
+  height: 250px;
 }
 .categories-main-div-img {
   position: absolute;
-  bottom: 10%;
+  bottom: 35%;
   left: 0;
   width: 28%;
+  object-fit: cover;
 }
 .categories-main-div-text {
   width: 50%;
@@ -214,11 +217,16 @@ nav .nav-icon {
   display: flex;
   flex-direction: column;
   padding: 0;
+  object-fit: cover;
+  height: 350px;
 }
 .arrivals-main-div-img {
   background-color: var(--Lemon);
-  width: 25%;
+  width: 30%;
 }
+/* .arrivals-img {
+  border: 1px solid rebeccapurple;
+} */
 .arrivals-text-div {
   background-color: var(--White);
   width: 100%;
@@ -426,8 +434,14 @@ nav .nav-icon {
     gap: 3em;
     width: 100%;
   }
+  .nav ul li {
+    font-size: 1.25rem;
+  }
   .nav ul .active {
     color: var(--Black);
+  }
+  .nav ul li:hover {
+    color: var(--White);
   }
   .nav .nav-icon {
     display: block;
@@ -480,6 +494,11 @@ nav .nav-icon {
   .resources-header h2,
   .testimonials-header h2 {
     font-size: 1.75rem;
+  }
+  .categories-main-div-img {
+    bottom: 65%;
+    left: 0;
+    width: 35%;
   }
   /* grow  */
   .grow-div {

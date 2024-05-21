@@ -10,7 +10,7 @@ const ArrivalsLogic = ({ arrivalsData }) => {
       {arrivalsData.map((arrival, index) => (
         <div key={index} className="arrivals-main-div">
           <div className="arrivals-main-div-img">
-            <div>
+            <div className="arrivals-img">
               <img src={images[index]} alt={arrival.text1} />
             </div>
           </div>
