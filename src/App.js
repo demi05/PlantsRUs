@@ -11,14 +11,16 @@ import Testimonials from "./components/Testimonials";
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <Hero />
-      <Categories />
-      <Arrivals />
-      <Grow />
-      <Resources />
-      <Testimonials />
-      <Footer />
+      <div className="overlay">
+        <Nav />
+        <Hero />
+        <Categories />
+        <Arrivals />
+        <Grow />
+        <Resources />
+        <Testimonials />
+        <Footer />
+      </div>
     </div>
   );
 }
