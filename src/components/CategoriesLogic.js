@@ -6,13 +6,13 @@ const CategoriesLogic = ({ categoriesData }) => {
   const images = [category1, category2];
 
   return (
-    <div>
+    <div className="cat-arr-grid-main">
       {categoriesData.map((category, index) => (
-        <div key={index} className="categories-main-div">
-          <div className="categories-main-div-img">
+        <div key={index} className="cat-arr-grid-main-div">
+          <div className="cat-arr-grid-main-div-img">
             <img src={index === 2 ? images[0] : images[index]} alt={category} />
           </div>
-          <div className="categories-main-div-text">
+          <div className="cat-arr-grid-main-div-text">
             <h3>{category}</h3>
             <p>Shop Now</p>
           </div>

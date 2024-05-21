@@ -8,14 +8,14 @@ const Arrivals = () => {
   ];
 
   return (
-    <div>
-      <div className="arrivals-header">
+    <div className="cat-arr-grid">
+      <div className="cat-arr-grid-header">
         <h2>
           New <span>Arrivals</span>
         </h2>
+        <p>Explore More</p>
       </div>
-      <p>Explore More</p>
-      <div className="arrivals-main">
+      <div className="cat-arr-grid-main">
         <ArrivalsLogic arrivalsData={arrivalsData} />
       </div>
     </div>

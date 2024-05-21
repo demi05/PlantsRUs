@@ -16,7 +16,7 @@ const Resources = () => {
     },
   ];
   return (
-    <div>
+    <div className="resources-div">
       <div className="resources-header">
         <h2>Explore Resources</h2>
         <p>Find More</p>
@@ -30,7 +30,7 @@ const Resources = () => {
             <div className="resources-main-text">
               <h3>{resource.text1}</h3>
               <p>{resource.text2}</p>
-              <p>Read More</p>
+              <p className="read-more">Read More</p>
             </div>
           </div>
         ))}

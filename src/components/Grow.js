@@ -24,7 +24,7 @@ const Grow = () => {
             <p>{text}</p>
           </div>
         ))}
-        <p>Find Out More</p>
+        <p className="find">Find Out More</p>
       </div>
     </div>
   );

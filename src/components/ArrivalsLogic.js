@@ -4,14 +4,14 @@ import arrival3 from "../assets/images/PngItem_127225 1.svg";
 const ArrivalsLogic = ({ arrivalsData }) => {
   const images = [arrival1, arrival2, arrival3];
   return (
-    <div>
+    <div className="cat-arr-grid-main">
       {arrivalsData.map((arrival, index) => (
-        <div key={index} className="arrivals-main-div">
-          <div className="arrivals-main-img">
+        <div key={index} className="cat-arr-grid-main-div">
+          <div className="cat-arr-grid-main-div-img">
             <img src={images[index]} alt={arrival.text1} />
           </div>
 
-          <div className="arrivals-text">
+          <div className="cat-arr-grid-main-div-text">
             <p>{arrival.text1}</p>
             <div className="arrival-text-main">
               <h3>{arrival.text2}</h3>
