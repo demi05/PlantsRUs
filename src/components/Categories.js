@@ -8,14 +8,14 @@ const Categories = () => {
   ];
 
   return (
-    <div className="cat-arr-grid">
-      <div className="cat-arr-grid-header categories-header">
+    <div className="categories-div">
+      <div className="categories-header">
         <h2>
           Our <span>Categories</span>
         </h2>
         <p>Explore More</p>
       </div>
-      <div className="cat-arr-grid-main">
+      <div>
         <CategoriesLogic categoriesData={categoriesData} />
       </div>
     </div>
