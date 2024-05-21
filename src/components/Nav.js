@@ -1,7 +1,6 @@
 import cartIcon from "../assets/images/shopping-cart-03.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimesCircle } from "@fortawesome/free-solid-svg-icons";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useRef } from "react";
 
 const Nav = () => {
@@ -15,6 +14,9 @@ const Nav = () => {
       <div className="nav">
         <h2>Plants R Us</h2>
         <div className="nav-elements" ref={navRef}>
+          <button onClick={showNavBar} className="nav-icon close-icon">
+            <FontAwesomeIcon icon={faTimes} />
+          </button>
           <ul>
             <li onClick={showNavBar} className="active">
               Home
@@ -27,9 +29,6 @@ const Nav = () => {
             <img src={cartIcon} alt="cart icon" />
             <p>2</p>
           </div>
-          <button onClick={showNavBar} className="nav-icon close-icon">
-            <FontAwesomeIcon icon={faTimes} />
-          </button>
         </div>
         <button onClick={showNavBar} className="nav-icon open-icon">
           <FontAwesomeIcon icon={faBars} />
