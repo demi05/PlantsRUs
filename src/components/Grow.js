@@ -25,7 +25,7 @@ const Grow = () => {
         </h2>
         {growData.map((text, index) => (
           <motion.div
-            whileHover={{ x: -100 }}
+            whileHover={{ x: -50 }}
             transition={{ delay: 0.1 }}
             className="grow-text-list"
             key={index}
