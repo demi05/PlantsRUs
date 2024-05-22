@@ -147,7 +147,6 @@ nav .nav-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 1.5em;
   margin-bottom: 6em;
 }
 .categories-header {
@@ -506,6 +505,7 @@ nav .nav-icon {
   }
   .categories-header {
     margin-bottom: 10em;
+    padding: 0 3em 1.5em 3em;
   }
   .categories-header h2,
   .arrivals-header h2,
@@ -524,6 +524,9 @@ nav .nav-icon {
     bottom: 15%;
     left: 0;
     width: 30%;
+  }
+  .arrivals-div {
+    padding-top: 4em;
   }
   .arrivals-main {
     gap: 2em;
