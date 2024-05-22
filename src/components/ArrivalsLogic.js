@@ -9,10 +9,8 @@ const ArrivalsLogic = ({ arrivalsData }) => {
     <div className="arrivals-main">
       {arrivalsData.map((arrival, index) => (
         <div key={index} className="arrivals-main-div">
-          <div className="arrivals-main-div-img">
-            <div className="arrivals-img">
-              <img src={images[index]} alt={arrival.text1} />
-            </div>
+          <div className="arrivals-img">
+            <img src={images[index]} alt={arrival.text1} />
           </div>
 
           <div className="arrivals-text-div">

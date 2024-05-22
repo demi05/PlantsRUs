@@ -33,9 +33,7 @@ span {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* gap: 8em; */
   padding: 0 5em;
-  /* border: 1px solid red; */
 }
 .nav h2 {
   font-style: italic;
@@ -65,6 +63,7 @@ span {
   display: flex;
   margin-left: auto;
   width: 5%;
+  cursor: pointer;
 }
 .cart img {
   margin-top: 0.5em;
@@ -173,8 +172,7 @@ nav .nav-icon {
   color: var(--Green);
   text-decoration: underline;
 }
-.categories-main,
-.arrivals-main {
+.categories-main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
@@ -185,19 +183,18 @@ nav .nav-icon {
 }
 .categories-main-div,
 .arrivals-main-div {
-  background-color: var(--Lemon);
   padding: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .categories-main-div {
+  background-color: var(--Lemon);
   position: relative;
-  height: 250px;
 }
 .categories-main-div-img {
   position: absolute;
-  bottom: 35%;
+  bottom: 20%;
   left: 0;
   width: 28%;
   object-fit: cover;
@@ -213,20 +210,30 @@ nav .nav-icon {
 .arrivals-div {
   padding-top: 4em;
 }
+.arrivals-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
 .arrivals-main-div {
   display: flex;
   flex-direction: column;
-  padding: 0;
-  object-fit: cover;
-  height: 350px;
-}
-.arrivals-main-div-img {
-  background-color: var(--Lemon);
+  padding: 0.2em;
   width: 30%;
 }
-/* .arrivals-img {
-  border: 1px solid rebeccapurple;
-} */
+.arrivals-img {
+  background-color: var(--Lemon);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem;
+  height: 350px;
+}
+.arrivals-img img {
+  width: 50%;
+}
 .arrivals-text-div {
   background-color: var(--White);
   width: 100%;
@@ -289,7 +296,6 @@ nav .nav-icon {
   display: flex;
   margin-bottom: 3em;
   align-items: center;
-  /* border: 1px solid red; */
 }
 .resources-header h2 {
   color: var(--White);
@@ -412,6 +418,7 @@ nav .nav-icon {
   /* nav  */
   .nav {
     position: relative;
+    padding: 0 3em;
   }
   .nav .nav-elements {
     height: 100%;
@@ -423,7 +430,7 @@ nav .nav-icon {
     align-items: center;
     justify-content: center;
     gap: 1em;
-    background-color: var(--Green);
+    background-color: var(--Lemon);
     transition: 1s;
     transform: translateY(-100vh);
     padding: 5em 0;
@@ -441,7 +448,10 @@ nav .nav-icon {
     color: var(--Black);
   }
   .nav ul li:hover {
-    color: var(--White);
+    color: var(--Green);
+  }
+  .nav .cart {
+    margin-left: 0;
   }
   .nav .nav-icon {
     display: block;
@@ -463,6 +473,7 @@ nav .nav-icon {
   .hero {
     display: flex;
     flex-direction: column;
+    padding: 0 3em;
   }
   .hero-text h1 {
     font-size: 2.5rem;
@@ -483,11 +494,18 @@ nav .nav-icon {
     margin-left: 0;
   }
   /* categories  */
+  .arrivals-div,
+  .categories-main {
+    padding: 0 3em;
+  }
   .categories-main,
   .arrivals-main {
     display: flex;
     flex-direction: column;
-    min-height: 30vh;
+    gap: 3.5em;
+  }
+  .categories-header {
+    margin-bottom: 10em;
   }
   .categories-header h2,
   .arrivals-header h2,
@@ -495,15 +513,26 @@ nav .nav-icon {
   .testimonials-header h2 {
     font-size: 1.75rem;
   }
+  .categories-main-div,
+  .arrivals-main-div {
+    width: 100%;
+  }
+  .categories-main-div-text h3 {
+    font-size: 1.75rem;
+  }
   .categories-main-div-img {
-    bottom: 65%;
+    bottom: 15%;
     left: 0;
-    width: 35%;
+    width: 30%;
+  }
+  .arrivals-main {
+    gap: 2em;
   }
   /* grow  */
   .grow-div {
     display: flex;
     flex-direction: column;
+    padding: 0 3em;
   }
   .grow-text h2 {
     font-size: 3rem;
@@ -517,6 +546,9 @@ nav .nav-icon {
     display: flex;
     flex-direction: column;
     gap: 3em;
+  }
+  .resources-main {
+    margin-left: 0;
   }
   .testimonials-div {
     padding: 5em 3em;
@@ -534,7 +566,7 @@ nav .nav-icon {
   }
   /* footer  */
   .footer {
-    padding: 5em;
+    padding: 5em 2.5em;
   }
   .footer-main {
     display: flex;
