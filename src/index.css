@@ -40,8 +40,10 @@ span {
 }
 .nav .nav-elements {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: 60%;
+  width: 40%;
+  margin-left: auto;
 }
 .nav ul {
   list-style: none;
@@ -62,8 +64,9 @@ span {
 .cart {
   display: flex;
   margin-left: auto;
-  width: 5%;
+  width: 10%;
   cursor: pointer;
+  /* border: 1px solid rebeccapurple; */
 }
 .cart img {
   margin-top: 0.5em;
@@ -72,7 +75,7 @@ span {
   font-size: smaller;
   background-color: var(--Yellow);
   border-radius: 50%;
-  width: 25%;
+  width: 40%;
   height: 20px;
   display: flex;
   align-items: center;
@@ -415,6 +418,10 @@ nav .nav-icon {
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
+  .nav .nav-elements {
+    margin-left: 0;
+    width: 70%;
+  }
   .hero-buttons button {
     width: 40%;
   }
