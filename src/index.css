@@ -186,6 +186,7 @@ nav .nav-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 .categories-main-div {
   background-color: var(--Lemon);
@@ -413,6 +414,26 @@ nav .nav-icon {
   font-size: 1.5rem;
 }
 
+@media (min-width: 768px) and (max-width: 1200px) {
+  .hero-buttons button {
+    width: 40%;
+  }
+  .hero-buttons button:last-of-type {
+    width: 45%;
+  }
+  .categories-main-div-img {
+    position: absolute;
+    bottom: 35%;
+  }
+  .categories-main-div-text:last-of-type {
+    /* padding-right: 2em; */
+    border: 1px solid red;
+  }
+  .categories-main-div-text h3 {
+    font-size: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   /* nav  */
   .nav {
@@ -583,5 +604,20 @@ nav .nav-icon {
   }
   .social-icons {
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+  .categories-main,
+  .arrivals-main {
+    gap: 6em;
+  }
+  .categories-main-div-img {
+    bottom: 5%;
+    left: 0;
+    width: 20%;
+  }
+  .arrivals-img img {
+    width: 30%;
   }
 }
