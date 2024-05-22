@@ -1,4 +1,3 @@
-import { useState } from "react";
 import playIcon from "../assets/images/play-icon.svg";
 import heroImg from "../assets/images/PngItem_127225 1.svg";
 import { motion } from "framer-motion";
