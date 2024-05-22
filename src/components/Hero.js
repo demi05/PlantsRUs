@@ -4,7 +4,6 @@ import heroImg from "../assets/images/PngItem_127225 1.svg";
 import { motion } from "framer-motion";
 
 const Hero = () => {
-  const [move, setMove] = useState(false);
   return (
     <div className="hero">
       <div className="hero-text">

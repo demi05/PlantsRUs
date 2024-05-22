@@ -2,7 +2,7 @@ import cartIcon from "../assets/images/shopping-cart-03.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useRef } from "react";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Nav = () => {
   const navRef = useRef();
