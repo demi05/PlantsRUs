@@ -2,6 +2,7 @@ import cartIcon from "../assets/images/shopping-cart-03.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useRef } from "react";
+import { delay, motion } from "framer-motion";
 
 const Nav = () => {
   const navRef = useRef();
@@ -12,18 +13,43 @@ const Nav = () => {
   return (
     <nav>
       <div className="nav">
-        <h2>Plants R Us</h2>
+        <motion.h2 whileHover={{ x: 100 }} transition={{ delay: 0.1 }}>
+          Plants R Us
+        </motion.h2>
         <div className="nav-elements" ref={navRef}>
           <button onClick={showNavBar} className="nav-icon close-icon">
             <FontAwesomeIcon icon={faTimes} />
           </button>
           <ul>
-            <li onClick={showNavBar} className="active">
+            <motion.li
+              whileHover={{ y: 50 }}
+              transition={{ delay: 0.1 }}
+              onClick={showNavBar}
+              className="active"
+            >
               Home
-            </li>
-            <li onClick={showNavBar}>About</li>
-            <li onClick={showNavBar}>Products</li>
-            <li onClick={showNavBar}>Catalogue</li>
+            </motion.li>
+            <motion.li
+              whileHover={{ y: 50 }}
+              transition={{ delay: 0.1 }}
+              onClick={showNavBar}
+            >
+              About
+            </motion.li>
+            <motion.li
+              whileHover={{ y: 50 }}
+              transition={{ delay: 0.1 }}
+              onClick={showNavBar}
+            >
+              Products
+            </motion.li>
+            <motion.li
+              whileHover={{ y: 50 }}
+              transition={{ delay: 0.1 }}
+              onClick={showNavBar}
+            >
+              Catalogue
+            </motion.li>
           </ul>
           <div className="cart">
             <img src={cartIcon} alt="cart icon" />

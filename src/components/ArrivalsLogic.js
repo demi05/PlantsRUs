@@ -1,6 +1,7 @@
 import arrival1 from "../assets/images/PngItem_587574 1.svg";
 import arrival2 from "../assets/images/PngItem_5162680 1.svg";
 import arrival3 from "../assets/images/PngItem_127225 1.svg";
+import { motion } from "framer-motion";
 
 const ArrivalsLogic = ({ arrivalsData }) => {
   const images = [arrival1, arrival2, arrival3];
@@ -8,7 +9,11 @@ const ArrivalsLogic = ({ arrivalsData }) => {
   return (
     <div className="arrivals-main">
       {arrivalsData.map((arrival, index) => (
-        <div key={index} className="arrivals-main-div">
+        <motion.div
+          whileHover={{ scale: 1.2 }}
+          key={index}
+          className="arrivals-main-div"
+        >
           <div className="arrivals-img">
             <img src={images[index]} alt={arrival.text1} />
           </div>
@@ -22,7 +27,7 @@ const ArrivalsLogic = ({ arrivalsData }) => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

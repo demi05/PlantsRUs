@@ -1,5 +1,6 @@
 import growImg from "../assets/images/Frame 52.svg";
 import leaf from "../assets/images/Leaf 4 - Dark Green.svg";
+import { motion } from "framer-motion";
 
 const Grow = () => {
   const growData = [
@@ -11,18 +12,27 @@ const Grow = () => {
   ];
   return (
     <div className="grow-div">
-      <div className="grow-img">
+      <motion.div
+        whileHover={{ x: 100 }}
+        transition={{ delay: 0.1 }}
+        className="grow-img"
+      >
         <img src={growImg} alt="a plant" />
-      </div>
+      </motion.div>
       <div className="grow-text">
         <h2>
           Grow your own Unique<span> Plant</span>
         </h2>
         {growData.map((text, index) => (
-          <div className="grow-text-list" key={index}>
+          <motion.div
+            whileHover={{ x: -100 }}
+            transition={{ delay: 0.1 }}
+            className="grow-text-list"
+            key={index}
+          >
             <img src={leaf} alt="leaf icon" />
             <p>{text}</p>
-          </div>
+          </motion.div>
         ))}
         <p className="find">Find Out More</p>
       </div>

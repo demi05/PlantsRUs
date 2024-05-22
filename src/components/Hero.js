@@ -1,12 +1,16 @@
+import { useState } from "react";
 import playIcon from "../assets/images/play-icon.svg";
 import heroImg from "../assets/images/PngItem_127225 1.svg";
+import { motion } from "framer-motion";
+
 const Hero = () => {
+  const [move, setMove] = useState(false);
   return (
     <div className="hero">
       <div className="hero-text">
-        <h1>
+        <motion.h1 whileHover={{ x: 100 }} transition={{ delay: 0.1 }}>
           Plant Your Happiness. Grow a <span>Greener </span>World!
-        </h1>
+        </motion.h1>
         <p>
           Discover a New Level of Joy and Tranquility Through Indoor and Outdoor
           Gardening. Plant, Grow, and Thrive Together!
@@ -19,9 +23,13 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className="hero-img">
+      <motion.div
+        whileHover={{ x: -100 }}
+        transition={{ delay: 0.1 }}
+        className="hero-img"
+      >
         <img src={heroImg} alt="a plant" />
-      </div>
+      </motion.div>
     </div>
   );
 };

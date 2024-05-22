@@ -1,5 +1,6 @@
 import resource1 from "../assets/images/Frame 62.svg";
 import resource2 from "../assets/images/Frame 63.svg";
+import { motion } from "framer-motion";
 
 const Resources = () => {
   const images = [resource1, resource2];
@@ -23,7 +24,11 @@ const Resources = () => {
       </div>
       <div className="resources-main-div">
         {resourcesData.map((resource, index) => (
-          <div className="resources-main">
+          <motion.div
+            whileHover={{ y: -50 }}
+            transition={{ delay: 0.1 }}
+            className="resources-main"
+          >
             <div key={index} className="resources-main-img">
               <img src={images[index]} alt="plants" />
             </div>
@@ -32,7 +37,7 @@ const Resources = () => {
               <p>{resource.text2}</p>
               <p className="read-more">Read More</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
