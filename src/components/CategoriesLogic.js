@@ -9,7 +9,8 @@ const CategoriesLogic = ({ categoriesData }) => {
     <div className="categories-main">
       {categoriesData.map((category, index) => (
         <motion.div
-          whileHover={{ scale: 1.1 }}
+          animate={{ scale: [1.1, 1] }}
+          transition={{ duration: 1.5 }}
           key={index}
           className="categories-main-div"
         >

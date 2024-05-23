@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="hero">
       <div className="hero-text">
-        <motion.h1 whileHover={{ x: 100 }} transition={{ delay: 0.1 }}>
+        <motion.h1 animate={{ x: [100, 0] }} transition={{ duration: 1.5 }}>
           Plant Your Happiness. Grow a <span>Greener </span>World!
         </motion.h1>
         <p>
@@ -22,8 +22,8 @@ const Hero = () => {
         </div>
       </div>
       <motion.div
-        whileHover={{ x: -100 }}
-        transition={{ delay: 0.1 }}
+        animate={{ x: [-100, 0] }}
+        transition={{ duration: 1.5 }}
         className="hero-img"
       >
         <img src={heroImg} alt="a plant" />

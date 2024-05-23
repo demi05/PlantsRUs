@@ -10,7 +10,8 @@ const ArrivalsLogic = ({ arrivalsData }) => {
     <div className="arrivals-main">
       {arrivalsData.map((arrival, index) => (
         <motion.div
-          whileHover={{ scale: 1.2 }}
+          animate={{ scale: [1.2, 1] }}
+          transition={{ duration: 1.5 }}
           key={index}
           className="arrivals-main-div"
         >

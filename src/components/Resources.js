@@ -25,8 +25,8 @@ const Resources = () => {
       <div className="resources-main-div">
         {resourcesData.map((resource, index) => (
           <motion.div
-            whileHover={{ y: -50 }}
-            transition={{ delay: 0.1 }}
+            animate={{ y: [-50, 0] }}
+            transition={{ duration: 1.5 }}
             className="resources-main"
           >
             <div key={index} className="resources-main-img">

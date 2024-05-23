@@ -13,8 +13,8 @@ const Grow = () => {
   return (
     <div className="grow-div">
       <motion.div
-        whileHover={{ x: 100 }}
-        transition={{ delay: 0.1 }}
+        animate={{ x: [100, 0] }}
+        transition={{ duration: 1.5 }}
         className="grow-img"
       >
         <img src={growImg} alt="a plant" />
@@ -25,8 +25,8 @@ const Grow = () => {
         </h2>
         {growData.map((text, index) => (
           <motion.div
-            whileHover={{ x: -50 }}
-            transition={{ delay: 0.1 }}
+            animate={{ x: [-50, 0] }}
+            transition={{ duration: 1.5 }}
             className="grow-text-list"
             key={index}
           >
