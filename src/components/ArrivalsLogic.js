@@ -5,14 +5,29 @@ import { motion } from "framer-motion";
 
 const ArrivalsLogic = ({ arrivalsData }) => {
   const images = [arrival1, arrival2, arrival3];
+  const animationVariants = {
+    initial1: {
+      scale: 1.2,
+    },
+    animate1: (index) => ({
+      scale: 1,
+      transition: {
+        delay: 0.7 * index,
+        duration: 1.5,
+      },
+    }),
+  };
 
   return (
     <div className="arrivals-main">
       {arrivalsData.map((arrival, index) => (
         <motion.div
-          animate={{ scale: [1.2, 1] }}
-          transition={{ duration: 1.5 }}
+          variants={animationVariants}
+          initial="initial1"
+          whileInView="animate1"
+          viewport={{ once: true }}
           key={index}
+          custom={index}
           className="arrivals-main-div"
         >
           <div className="arrivals-img">

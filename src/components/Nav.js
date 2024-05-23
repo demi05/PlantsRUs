@@ -1,11 +1,36 @@
 import cartIcon from "../assets/images/shopping-cart-03.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+// import Animation from "./Animation";
 import { useRef } from "react";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Nav = () => {
-  const navRef = useRef();
+  const animationVariants = {
+    initial1: {
+      x: 100,
+    },
+    animate1: {
+      x: 0,
+      transition: {
+        delay: 0.35,
+        duration: 1.5,
+      },
+    },
+    initial2: {
+      y: 50,
+    },
+    animate2: {
+      y: 0,
+      transition: {
+        delay: 0.35,
+        duration: 1.5,
+      },
+    },
+  };
+
+  const navRef = useRef(null);
+
   const showNavBar = () => {
     navRef.current.classList.toggle("responsive-nav");
   };
@@ -13,12 +38,20 @@ const Nav = () => {
   return (
     <nav>
       <div className="nav">
-        <motion.h2 animate={{ x: [100, 0] }} transition={{ duration: 1.5 }}>
+        <motion.h2
+          variants={animationVariants}
+          initial="initial1"
+          whileInView="animate1"
+          viewport={{ once: true }}
+        >
           Plants R Us
         </motion.h2>
+
         <motion.div
-          animate={{ y: [50, 0] }}
-          transition={{ duration: 1.5 }}
+          variants={animationVariants}
+          initial="initial2"
+          whileInView="animate2"
+          viewport={{ once: true }}
           className="nav-elements"
           ref={navRef}
         >
@@ -38,10 +71,10 @@ const Nav = () => {
             <p>2</p>
           </div>
         </motion.div>
-        <button onClick={showNavBar} className="nav-icon open-icon">
-          <FontAwesomeIcon icon={faBars} />
-        </button>
       </div>
+      <button onClick={showNavBar} className="nav-icon open-icon">
+        <FontAwesomeIcon icon={faBars} />
+      </button>
     </nav>
   );
 };

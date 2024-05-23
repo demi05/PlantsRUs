@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 const Resources = () => {
   const images = [resource1, resource2];
+
   const resourcesData = [
     {
       text1: "Top 10 Pottery Pots to Buy",
@@ -16,6 +17,20 @@ const Resources = () => {
         "If you live in a cold climate, we have the perfect plants for you...",
     },
   ];
+
+  const animationVariants = {
+    initial1: {
+      y: 100,
+    },
+    animate1: (index) => ({
+      y: 0,
+      transition: {
+        delay: 0.5 * index,
+        duration: 1.5,
+      },
+    }),
+  };
+
   return (
     <div className="resources-div">
       <div className="resources-header">
@@ -25,9 +40,13 @@ const Resources = () => {
       <div className="resources-main-div">
         {resourcesData.map((resource, index) => (
           <motion.div
-            animate={{ y: [-50, 0] }}
-            transition={{ duration: 1.5 }}
+            variants={animationVariants}
+            initial="initial1"
+            whileInView="animate1"
+            viewport={{ once: true }}
             className="resources-main"
+            key={index}
+            custom={index}
           >
             <div key={index} className="resources-main-img">
               <img src={images[index]} alt="plants" />
