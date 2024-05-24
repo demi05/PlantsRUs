@@ -440,7 +440,7 @@ nav .nav-icon {
 @media (max-width: 768px) {
   /* nav  */
   .nav {
-    position: relative;
+    /* position: relative; */
     padding: 0 3em;
   }
   .nav .nav-elements {
@@ -454,8 +454,8 @@ nav .nav-icon {
     justify-content: center;
     gap: 1em;
     background-color: var(--Lemon);
-    transition: 1s;
-    transform: translateY(-100vh);
+    /* transition: 1s;
+    transform: translateY(-100vh); */
     padding: 5em 0;
     /* position: relative; */
   }
@@ -481,10 +481,11 @@ nav .nav-icon {
     opacity: 1;
     font-size: 1.6rem;
   }
-  .nav-open-btn {
+  .nav .open-icon {
     margin-left: auto;
+    cursor: pointer;
   }
-  .nav-close-btn {
+  .nav .close-icon {
     position: absolute;
     top: 5%;
     left: 5%;

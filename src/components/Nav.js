@@ -1,8 +1,7 @@
 import cartIcon from "../assets/images/shopping-cart-03.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-// import Animation from "./Animation";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 const Nav = () => {
@@ -30,9 +29,13 @@ const Nav = () => {
   };
 
   const navRef = useRef(null);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
-  const showNavBar = () => {
-    navRef.current.classList.toggle("responsive-nav");
+  const toggleNavBar = (e) => {
+    // e.preventDefault();
+    setIsNavOpen((prevState) => !prevState);
+    console.log(`Nav is now ${!isNavOpen}`);
+    // navRef.current.classList.toggle("responsive-nav");
   };
 
   return (
@@ -52,29 +55,29 @@ const Nav = () => {
           initial="initial2"
           whileInView="animate2"
           viewport={{ once: true }}
-          className="nav-elements"
+          className={`nav-elements ${isNavOpen ? "responsive-nav" : ""}`}
           ref={navRef}
         >
-          <button onClick={showNavBar} className="nav-icon close-icon">
+          <button onClick={toggleNavBar} className="nav-icon close-icon">
             <FontAwesomeIcon icon={faTimes} />
           </button>
           <ul>
-            <li onClick={showNavBar} className="active">
+            <li onClick={toggleNavBar} className="active">
               Home
             </li>
-            <li onClick={showNavBar}>About</li>
-            <li onClick={showNavBar}>Products</li>
-            <li onClick={showNavBar}>Catalogue</li>
+            <li onClick={toggleNavBar}>About</li>
+            <li onClick={toggleNavBar}>Products</li>
+            <li onClick={toggleNavBar}>Catalogue</li>
           </ul>
           <div className="cart">
             <img src={cartIcon} alt="cart icon" />
             <p>2</p>
           </div>
         </motion.div>
+        <button onClick={toggleNavBar} className="nav-icon open-icon">
+          <FontAwesomeIcon icon={faBars} />
+        </button>
       </div>
-      <button onClick={showNavBar} className="nav-icon open-icon">
-        <FontAwesomeIcon icon={faBars} />
-      </button>
     </nav>
   );
 };
