@@ -24,7 +24,7 @@ const Grow = () => {
     initial2: {
       x: 100,
     },
-    animate2: (index) => ({
+    animate2: (index: number) => ({
       x: 0,
       transition: {
         delay: 0.5 * index,

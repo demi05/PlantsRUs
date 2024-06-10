@@ -22,7 +22,7 @@ const Resources = () => {
     initial1: {
       y: 100,
     },
-    animate1: (index) => ({
+    animate1: (index: number) => ({
       y: 0,
       transition: {
         delay: 0.5 * index,

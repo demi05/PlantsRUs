@@ -1,6 +1,6 @@
 import ArrivalsLogic from "./ArrivalsLogic";
 
-const Arrivals: React.FC = () => {
+const Arrivals = () => {
   const arrivalsData = [
     { text1: "Indoor", text2: "Snake Plant", amount: "$32.00" },
     { text1: "Outdoor", text2: "Fern", amount: "$25.00" },
