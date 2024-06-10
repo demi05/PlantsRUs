@@ -1,6 +1,6 @@
 import ArrivalsLogic from "./ArrivalsLogic";
 
-const Arrivals = () => {
+const Arrivals: React.FC = () => {
   const arrivalsData = [
     { text1: "Indoor", text2: "Snake Plant", amount: "$32.00" },
     { text1: "Outdoor", text2: "Fern", amount: "$25.00" },
@@ -8,7 +8,7 @@ const Arrivals = () => {
   ];
 
   return (
-    <div className="arrivals-div">
+    <section className="arrivals-div" id="arrivals">
       <div className="arrivals-header">
         <h2>
           New <span>Arrivals</span>
@@ -18,7 +18,7 @@ const Arrivals = () => {
       <div>
         <ArrivalsLogic arrivalsData={arrivalsData} />
       </div>
-    </div>
+    </section>
   );
 };
 

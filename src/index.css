@@ -18,9 +18,13 @@
   --Lemon: rgba(246, 248, 245, 1);
   --Deep-Lemon: rgba(251, 239, 173, 1);
 }
+html {
+  scroll-behavior: smooth;
+}
 .App {
   font-family: "Poppins", sans-serif;
   padding: 2em 0 0 0;
+  width: 100%;
 }
 img {
   max-width: 100%;
@@ -52,13 +56,14 @@ span {
   gap: 2em;
   width: 35%;
 }
-.nav ul li {
-  cursor: pointer;
+.nav ul li a {
+  color: var(--Grey);
+  text-decoration: none;
 }
-.nav ul .active {
+.nav ul li a.active {
   color: var(--Green);
 }
-.nav ul li:hover {
+.nav ul li a:hover {
   color: var(--Green);
 }
 .cart {
@@ -293,6 +298,7 @@ nav .nav-icon {
 .resources-div {
   background-color: green;
   padding: 3em;
+  /* height: 100vh; */
 }
 .resources-header,
 .testimonials-header {
@@ -420,7 +426,7 @@ nav .nav-icon {
 @media (min-width: 768px) and (max-width: 1200px) {
   .nav .nav-elements {
     margin-left: 0;
-    width: 70%;
+    width: 85%;
   }
   .hero-buttons button {
     width: 40%;
@@ -491,7 +497,7 @@ nav .nav-icon {
     left: 5%;
   }
   .nav .responsive-nav {
-    transform: none;
+    display: none;
   }
   /* hero  */
   .hero {

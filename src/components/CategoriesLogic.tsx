@@ -2,13 +2,18 @@ import category1 from "../assets/images/PngItem_587574 1.svg";
 import category2 from "../assets/images/PngItem_5162680 1.svg";
 import { motion } from "framer-motion";
 
-const CategoriesLogic = ({ categoriesData }) => {
+type CategoriesLogicProp = {
+  categoriesData: string[];
+}
+
+const CategoriesLogic = ({ categoriesData}: CategoriesLogicProp) => {
+
   const images = [category1, category2];
   const animationVariants = {
     initial1: {
       scale: 1.1,
     },
-    animate1: (index) => ({
+    animate1: (index: number) => ({
       scale: 1,
       transition: {
         delay: 0.7 * index,

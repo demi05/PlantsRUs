@@ -34,7 +34,7 @@ const Grow = () => {
   };
 
   return (
-    <div className="grow-div">
+    <section className="grow-div" id="grow">
       <motion.div
         variants={animationVariants}
         initial="initial1"
@@ -64,7 +64,7 @@ const Grow = () => {
         ))}
         <p className="find">Find Out More</p>
       </div>
-    </div>
+    </section>
   );
 };
 

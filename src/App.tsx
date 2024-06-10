@@ -1,4 +1,4 @@
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Arrivals from "./components/Arrivals";
 import Categories from "./components/Categories";
 import Footer from "./components/Footer";
@@ -10,6 +10,7 @@ import Testimonials from "./components/Testimonials";
 
 function App() {
   return (
+    <Router>
     <div className="App">
       <Nav />
       <Hero />
@@ -20,6 +21,7 @@ function App() {
       <Testimonials />
       <Footer />
     </div>
+    </Router>
   );
 }
 

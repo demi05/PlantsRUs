@@ -4,7 +4,7 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-const Nav = () => {
+const Nav: React.FC = () => {
   const animationVariants = {
     initial1: {
       x: 100,
@@ -31,12 +31,10 @@ const Nav = () => {
   const navRef = useRef(null);
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  const toggleNavBar = (e) => {
-    // e.preventDefault();
+  const toggleNavBar = () => {
     setIsNavOpen((prevState) => !prevState);
-    console.log(`Nav is now ${!isNavOpen}`);
-    // navRef.current.classList.toggle("responsive-nav");
   };
+
 
   return (
     <nav>
@@ -62,12 +60,16 @@ const Nav = () => {
             <FontAwesomeIcon icon={faTimes} />
           </button>
           <ul>
-            <li onClick={toggleNavBar} className="active">
-              Home
+            <li onClick={toggleNavBar}><a href="#hero" className="active">
+              Home</a>
             </li>
-            <li onClick={toggleNavBar}>About</li>
-            <li onClick={toggleNavBar}>Products</li>
-            <li onClick={toggleNavBar}>Catalogue</li>
+            <li onClick={toggleNavBar}><a href="#categories">Categories</a></li>
+            <li onClick={toggleNavBar}><a href="#arrivals">Arrivals</a></li>
+            <li onClick={toggleNavBar}><a href="#grow">Grow</a></li>
+            <li onClick={toggleNavBar}>
+              {" "}
+              <a href="#resources">Resources</a>
+            </li>
           </ul>
           <div className="cart">
             <img src={cartIcon} alt="cart icon" />

@@ -27,7 +27,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="hero">
+    <section className="hero" id="hero">
       <div className="hero-text">
         <motion.h1
           variants={animationVariants}
@@ -58,7 +58,7 @@ const Hero = () => {
       >
         <img src={heroImg} alt="a plant" />
       </motion.div>
-    </div>
+    </section>
   );
 };
 

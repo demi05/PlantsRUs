@@ -32,7 +32,7 @@ const Resources = () => {
   };
 
   return (
-    <div className="resources-div">
+    <section className="resources-div" id="resources">
       <div className="resources-header">
         <h2>Explore Resources</h2>
         <p>Find More</p>
@@ -59,7 +59,7 @@ const Resources = () => {
           </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

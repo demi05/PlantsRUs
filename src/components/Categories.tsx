@@ -8,7 +8,7 @@ const Categories = () => {
   ];
 
   return (
-    <div className="categories-div">
+    <section className="categories-div" id="categories">
       <div className="categories-header">
         <h2>
           Our <span>Categories</span>
@@ -18,7 +18,7 @@ const Categories = () => {
       <div>
         <CategoriesLogic categoriesData={categoriesData} />
       </div>
-    </div>
+    </section>
   );
 };
 
