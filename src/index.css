@@ -505,7 +505,6 @@ nav .nav-icon {
     display: flex;
     flex-direction: column;
     padding: 0 1em 0 2em;
-    border: 1px solid red;
   }
   .hero-text h1 {
     font-size: 2.5rem;
